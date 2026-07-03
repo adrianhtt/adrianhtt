@@ -18,6 +18,10 @@ Currently focused on: causal inference, constrained optimization (OR-Tools), age
 | [kg-fraud-detection](https://github.com/adrianhtt/kg-fraud-detection) | Graph features (PageRank, community, merchant co-occurrence) lift fraud AUPRC from 0.47 to 1.00 | NetworkX, LightGBM |
 | [rul-uncertainty](https://github.com/adrianhtt/rul-uncertainty) | Calibrated quantile regression for HVAC unit remaining-useful-life with grouped cross-validation | LightGBM, grouped CV |
 
+### Open source contributions
+
+- [google/or-tools #5242](https://github.com/google/or-tools/pull/5242) (merged): Python example encoding a gradient-boosted tree ensemble as a 0-1 integer program solved to global optimality with CP-SAT (Misic 2020), verified against brute force. Merged by the CP-SAT team lead.
+
 ### Templates
 
 | Repo | Purpose |
