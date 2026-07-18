@@ -21,6 +21,8 @@ Currently focused on: causal inference, constrained optimization (OR-Tools), age
 ### Open source contributions
 
 - [google/or-tools #5242](https://github.com/google/or-tools/pull/5242) (merged): Python example encoding a gradient-boosted tree ensemble as a 0-1 integer program solved to global optimality with CP-SAT (Misic 2020), verified against brute force. Merged by the CP-SAT team lead.
+- [meta-pytorch/botorch #3337](https://github.com/meta-pytorch/botorch/pull/3337) (merged): fixed an IndexError in qLogEHVI when an approximate box decomposition prunes every hypercell. Root-caused through three layers: the acquisition function, the safe_math smooth-max helper (restored torch.logsumexp parity for empty reduction dims), and optimize_acqf's initializer, with regression tests at each layer.
+- [optuna/optuna-integration #302](https://github.com/optuna/optuna-integration/pull/302) (merged): made BoTorchSampler's multi-objective path actually use the numerically stable qLogEHVI and qLogNEHVI acquisition functions. The existing fallback silently never activated because it checked the wrong botorch module. Diagnosing a CI failure on this PR is what surfaced the botorch bug above.
 
 ### Templates
 
